@@ -7,11 +7,9 @@
  <!-- Tailwind CSS -->
  <script src="https://cdn.tailwindcss.com"></script>
  <!-- FontAwesome for Icons -->
- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fontawesome/6.4.0/css/all.min.css">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
  <!-- Google Fonts: Inter -->
- <link
-href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&displa
-y=swap" rel="stylesheet">
+ <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
  <script>
  tailwind.config = {
  theme: {
@@ -82,68 +80,54 @@ y=swap" rel="stylesheet">
  </style>
 </head>
 <body class="bg-slate-50 text-slate-800 font-sans antialiased min-h-screen flex flex-col">
- <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate200 shadow-sm transition-all duration-300">
- <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justifybetween">
+ <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-200 shadow-sm transition-all duration-300">
+ <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
  <div class="flex items-center space-x-3 cursor-pointer group"
 onclick="switchTab('explore')">
- <div class="w-11 h-11 bg-brand-500 rounded-2xl flex items-center justify-center
-text-white shadow-md shadow-brand-500/20 transform group-hover:rotate-12 transition
-duration-300">
+ <div class="w-11 h-11 bg-brand-500 rounded-2xl flex items-center justify-center text-white shadow-md shadow-brand-500/20 transform group-hover:rotate-12 transition duration-300">
  <i class="fa-solid fa-utensils text-xl"></i>
  </div>
  <div>
- <span class="text-2xl font-bold tracking-tight text-slate-900">Share<span
-class="text-brand-600">Plate</span></span>
- <span class="block text-xs font-medium text-slate-500">Bridging Events &
-Shelters</span>
+ <span class="text-2xl font-bold tracking-tight text-slate-900">Share<span class="text-brand-600">Plate</span></span>
+ <span class="block text-xs font-medium text-slate-500">Bridging Events & Shelters</span>
  </div>
  </div>
 
  <nav class="hidden md:flex items-center space-x-1">
- <button onclick="switchTab('explore')" id="nav-explore" class="px-4 py-2 roundedxl text-sm font-semibold text-brand-600 bg-brand-50 transition transform hover:scale105">
+ <button onclick="switchTab('explore')" id="nav-explore" class="px-4 py-2 rounded-xl text-sm font-semibold text-brand-600 bg-brand-50 transition transform hover:scale-105">
  <i class="fa-solid fa-bowl-food mr-2"></i>Available Food
  </button>
- <button onclick="switchTab('donate')" id="nav-donate" class="px-4 py-2 rounded-xl
-text-sm font-semibold text-slate-600 hover:text-slate-900 hover:bg-slate-100 transition
-transform hover:scale-105">
+ <button onclick="switchTab('donate')" id="nav-donate" class="px-4 py-2 rounded-xl text-sm font-semibold text-slate-600 hover:text-slate-900 hover:bg-slate-100 transition transform hover:scale-105">
  <i class="fa-solid fa-hand-holding-heart mr-2"></i>Donate Food
  </button>
- <button onclick="switchTab('shelter')" id="nav-shelter" class="px-4 py-2 rounded-xl
-text-sm font-semibold text-slate-600 hover:text-slate-900 hover:bg-slate-100 transition
-transform hover:scale-105">
+ <button onclick="switchTab('shelter')" id="nav-shelter" class="px-4 py-2 rounded-xl text-sm font-semibold text-slate-600 hover:text-slate-900 hover:bg-slate-100 transition transform hover:scale-105">
  <i class="fa-solid fa-house-chimney-user mr-2"></i>Shelter / NGO Register
  </button>
- <button onclick="switchTab('impact')" id="nav-impact" class="px-4 py-2 rounded-xl
-text-sm font-semibold text-slate-600 hover:text-slate-900 hover:bg-slate-100 transition
-transform hover:scale-105">
+ <button onclick="switchTab('impact')" id="nav-impact" class="px-4 py-2 rounded-xl text-sm font-semibold text-slate-600 hover:text-slate-900 hover:bg-slate-100 transition transform hover:scale-105">
  <i class="fa-solid fa-chart-line mr-2"></i>Live Impact
  </button>
  </nav>
  <div class="flex items-center space-x-3">
- <button onclick="switchTab('donate')" class="bg-brand-600 hover:bg-brand-700
-text-white font-medium px-5 py-2.5 rounded-xl shadow-lg shadow-brand-600/20
-hover:shadow-brand-600/30 transition transform hover:-translate-y-0.5 active:translate-y0 text-sm flex items-center animate-glow">
+ <button onclick="switchTab('donate')" class="bg-brand-600 hover:bg-brand-700 text-white font-medium px-5 py-2.5 rounded-xl shadow-lg shadow-brand-600/20 hover:shadow-brand-600/30 transition transform hover:-translate-y-0.5 active:translate-y-0 text-sm flex items-center animate-glow">
  <i class="fa-solid fa-plus-circle mr-2"></i>Post Surplus Food
  </button>
- <button onclick="toggleMobileMenu()" class="md:hidden p-2.5 rounded-xl textslate-600 hover:bg-slate-100 transition">
+ <button onclick="toggleMobileMenu()" class="md:hidden p-2.5 rounded-xl text-slate-600 hover:bg-slate-100 transition">
  <i class="fa-solid fa-bars text-lg"></i>
  </button>
  </div>
  </div>
  <!-- Mobile Navigation Menu -->
- <div id="mobile-menu" class="hidden md:hidden border-t border-slate-200 bg-white
-px-4 pt-2 pb-4 space-y-1 transition-all duration-300">
- <button onclick="switchTab('explore'); toggleMobileMenu();" class="w-full text-left
-px-4 py-2.5 rounded-xl text-sm font-semibold text-slate-700 hover:bg-slate-100 transition">
+ <div id="mobile-menu" class="hidden md:hidden border-t border-slate-200 bg-white px-4 pt-2 pb-4 space-y-1 transition-all duration-300">
+ <button onclick="switchTab('explore'); toggleMobileMenu();" class="w-full text-left px-4 py-2.5 rounded-xl text-sm font-semibold text-slate-700 hover:bg-slate-100 transition">
  <i class="fa-solid fa-bowl-food mr-2"></i>Available Food
  </button>
- <button onclick="switchTab('donate'); toggleMobileMenu();" class="w-full text-left px4 py-2.5 rounded-xl text-sm font-semibold text-slate-700 hover:bg-slate-100 transition">
+ <button onclick="switchTab('donate'); toggleMobileMenu();" class="w-full text-left px-4 py-2.5 rounded-xl text-sm font-semibold text-slate-700 hover:bg-slate-100 transition">
  <i class="fa-solid fa-hand-holding-heart mr-2"></i>Donate Food
  </button>
- <button onclick="switchTab('shelter'); toggleMobileMenu();" class="w-full text-left px4 py-2.5 rounded-xl text-sm font-semibold text-slate-700 hover:bg-slate-100 transition">
+ <button onclick="switchTab('shelter'); toggleMobileMenu();" class="w-full text-left px-4 py-2.5 rounded-xl text-sm font-semibold text-slate-700 hover:bg-slate-100 transition">
  <i class="fa-solid fa-house-chimney-user mr-2"></i>Shelter / NGO Register
  </button>
- <button onclick="switchTab('impact'); toggleMobileMenu();" class="w-full text-left px4 py-2.5 rounded-xl text-sm font-semibold text-slate-700 hover:bg-slate-100 transition">
+ <button onclick="switchTab('impact'); toggleMobileMenu();" class="w-full text-left px-4 py-2.5 rounded-xl text-sm font-semibold text-slate-700 hover:bg-slate-100 transition">
  <i class="fa-solid fa-chart-line mr-2"></i>Live Impact
  </button>
  </div>
@@ -152,61 +136,46 @@ px-4 py-2.5 rounded-xl text-sm font-semibold text-slate-700 hover:bg-slate-100 t
  <!-- TAB 1: EXPLORE AVAILABLE SURPLUS FOOD -->
  <section id="view-explore" class="space-y-6 animate-fade-in">
  <!-- Hero Banner -->
- <div class="relative overflow-hidden rounded-3xl bg-gradient-to-r from-emerald-900
-via-emerald-800 to-teal-900 text-white p-8 md:p-12 shadow-2xl">
+ <div class="relative overflow-hidden rounded-3xl bg-gradient-to-r from-emerald-900 via-emerald-800 to-teal-900 text-white p-8 md:p-12 shadow-2xl">
  <div class="absolute -right-10 -bottom-10 opacity-10 text-9xl animate-float">
  <i class="fa-solid fa-bowl-food"></i>
  </div>
  <div class="relative z-10 max-w-2xl space-y-4">
- <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold
-bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 animate-pulse">
- <span class="w-2 h-2 rounded-full bg-emerald-400 mr-2"></span> Real-time
-Event Recovery
+ <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 animate-pulse">
+ <span class="w-2 h-2 rounded-full bg-emerald-400 mr-2"></span> Real-time Event Recovery
  </span>
- <h1 class="text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight leadingtight">
+ <h1 class="text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight leading-tight">
  Turn Event Surplus Into Nourishing Meals.
  </h1>
  <p class="text-emerald-100 text-base md:text-lg font-light leading-relaxed">
- Weddings, parties, and banquets generate excess cooked food. Connect
-instantly with local orphanages, old-age homes, and shelters before it goes to waste.
+ Weddings, parties, and banquets generate excess cooked food. Connect instantly with local orphanages, old-age homes, and shelters before it goes to waste.
  </p>
  <div class="pt-2 flex flex-wrap gap-4">
- <button onclick="switchTab('donate')" class="bg-white text-emerald-900 fontsemibold px-6 py-3 rounded-xl shadow-md hover:bg-emerald-50 transition transform
-hover:-translate-y-1 duration-200">
+ <button onclick="switchTab('donate')" class="bg-white text-emerald-900 font-semibold px-6 py-3 rounded-xl shadow-md hover:bg-emerald-50 transition transform hover:-translate-y-1 duration-200">
  <i class="fa-solid fa-utensils mr-2 text-brand-600"></i>List Surplus Food Now
  </button>
- <button onclick="switchTab('shelter')" class="bg-emerald-700/60 border
-border-emerald-500/40 text-white font-semibold px-6 py-3 rounded-xl hover:bg-emerald700 transition transform hover:-translate-y-1 duration-200">
- <i class="fa-solid fa-house-chimney-user mr-2"></i>Register as Shelter /
-NGO
+ <button onclick="switchTab('shelter')" class="bg-emerald-700/60 border border-emerald-500/40 text-white font-semibold px-6 py-3 rounded-xl hover:bg-emerald-700 transition transform hover:-translate-y-1 duration-200">
+ <i class="fa-solid fa-house-chimney-user mr-2"></i>Register as Shelter / NGO
  </button>
  </div>
  </div>
  </div>
  <!-- Filters & Search -->
- <div class="flex flex-col md:flex-row gap-4 items-center justify-between bg-white p-4
-rounded-2xl shadow-sm border border-slate-200 transition-all duration-300
-hover:shadow-md">
+ <div class="flex flex-col md:flex-row gap-4 items-center justify-between bg-white p-4 rounded-2xl shadow-sm border border-slate-200 transition-all duration-300 hover:shadow-md">
  <div class="relative w-full md:w-96">
- <span class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-eventsnone text-slate-400">
+ <span class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-400">
  <i class="fa-solid fa-magnifying-glass"></i>
  </span>
- <input type="text" id="search-input" oninput="filterListings()"
-placeholder="Search by location, dish or event name..." class="w-full pl-10 pr-4 py-2.5
-rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-brand-500
-text-sm transition-all duration-200">
+ <input type="text" id="search-input" oninput="filterListings()" placeholder="Search by location, dish or event name..." class="w-full pl-10 pr-4 py-2.5 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-brand-500 text-sm transition-all duration-200">
  </div>
  <div class="flex flex-wrap items-center gap-3 w-full md:w-auto">
- <select id="filter-type" onchange="filterListings()" class="px-4 py-2.5 rounded-xl
-border border-slate-200 text-sm font-medium bg-white focus:outline-none focus:ring-2
-focus:ring-brand-500 transition-all duration-200 cursor-pointer">
+ <select id="filter-type" onchange="filterListings()" class="px-4 py-2.5 rounded-xl border border-slate-200 text-sm font-medium bg-white focus:outline-none focus:ring-2 focus:ring-brand-500 transition-all duration-200 cursor-pointer">
  <option value="all">All Dietary Types</option>
  <option value="Veg">Pure Veg</option>
  <option value="Non-Veg">Non-Veg</option>
  <option value="Both">Both Veg & Non-Veg</option>
  </select>
- <button onclick="resetFilters()" class="px-4 py-2.5 rounded-xl border borderslate-200 text-sm font-medium text-slate-600 hover:bg-slate-50 transition transform
-hover:scale-105 active:scale-95">
+ <button onclick="resetFilters()" class="px-4 py-2.5 rounded-xl border border-slate-200 text-sm font-medium text-slate-600 hover:bg-slate-50 transition transform hover:scale-105 active:scale-95">
  <i class="fa-solid fa-rotate-right mr-1.5"></i>Reset
  </button>
  </div>
@@ -215,57 +184,40 @@ hover:scale-105 active:scale-95">
  <div>
  <div class="flex items-center justify-between mb-4">
  <h2 class="text-xl font-bold text-slate-900">Active Surplus Food Available</h2>
- <span id="listing-count" class="text-xs font-semibold px-3 py-1 bg-brand-50 textbrand-700 rounded-full animate-pulse">0 Listings Active</span>
+ <span id="listing-count" class="text-xs font-semibold px-3 py-1 bg-brand-50 text-brand-700 rounded-full animate-pulse">0 Listings Active</span>
  </div>
- <div id="listings-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3
-gap-6">
+ <div id="listings-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
  <!-- Dynamic listings injected here -->
  </div>
  </div>
  </section>
  <!-- TAB 2: DONATE SURPLUS FOOD FORM -->
- <section id="view-donate" class="hidden max-w-3xl mx-auto space-y-6 animate-fadein">
- <div class="bg-white rounded-3xl p-6 md:p-10 shadow-xl border border-slate-200
-transition-all duration-300">
+ <section id="view-donate" class="hidden max-w-3xl mx-auto space-y-6 animate-fade-in">
+ <div class="bg-white rounded-3xl p-6 md:p-10 shadow-xl border border-slate-200 transition-all duration-300">
  <div class="text-center max-w-xl mx-auto mb-8">
- <span class="px-3 py-1 rounded-full text-xs font-semibold bg-brand-50 textbrand-600 border border-brand-200">Event Host Portal</span>
- <h2 class="text-2xl md:text-3xl font-extrabold text-slate-900 mt-2">Post Surplus
-Event Food</h2>
- <p class="text-slate-500 text-sm mt-1">Fill out the details below so nearby
-orphanages, old-age homes, and verified shelters can claim and collect the food
-promptly.</p>
+ <span class="px-3 py-1 rounded-full text-xs font-semibold bg-brand-50 text-brand-600 border border-brand-200">Event Host Portal</span>
+ <h2 class="text-2xl md:text-3xl font-extrabold text-slate-900 mt-2">Post Surplus Event Food</h2>
+ <p class="text-slate-500 text-sm mt-1">Fill out the details below so nearby orphanages, old-age homes, and verified shelters can claim and collect the food promptly.</p>
  </div>
- <form id="donation-form" onsubmit="handleDonationSubmit(event)"
-class="space-y-6">
+ <form id="donation-form" onsubmit="handleDonationSubmit(event)" class="space-y-6">
  <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
  <div>
- <label class="block text-sm font-semibold text-slate-700 mb-2">Event / Host
-Name <span class="text-red-500">*</span></label>
- <input type="text" id="host-name" required placeholder="e.g., Sharma
-Wedding Reception / Grand Banquets" class="w-full px-4 py-3 rounded-xl border borderslate-200 focus:outline-none focus:ring-2 focus:ring-brand-500 text-sm transition">
+ <label class="block text-sm font-semibold text-slate-700 mb-2">Event / Host Name <span class="text-red-500">*</span></label>
+ <input type="text" id="host-name" required placeholder="e.g., Sharma Wedding Reception / Grand Banquets" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-brand-500 text-sm transition">
  </div>
  <div>
- <label class="block text-sm font-semibold text-slate-700 mb-2">Contact
-Person Name <span class="text-red-500">*</span></label>
- <input type="text" id="contact-name" required placeholder="e.g., Rajesh
-Sharma" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none
-focus:ring-2 focus:ring-brand-500 text-sm transition">
+ <label class="block text-sm font-semibold text-slate-700 mb-2">Contact Person Name <span class="text-red-500">*</span></label>
+ <input type="text" id="contact-name" required placeholder="e.g., Rajesh Sharma" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-brand-500 text-sm transition">
  </div>
  </div>
  <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
  <div>
- <label class="block text-sm font-semibold text-slate-700 mb-2">Phone
-Number (For Coordination) <span class="text-red-500">*</span></label>
- <input type="tel" id="contact-phone" required placeholder="e.g., +91 98765
-43210" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none
-focus:ring-2 focus:ring-brand-500 text-sm transition">
+ <label class="block text-sm font-semibold text-slate-700 mb-2">Phone Number (For Coordination) <span class="text-red-500">*</span></label>
+ <input type="tel" id="contact-phone" required placeholder="e.g., +91 98765 43210" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-brand-500 text-sm transition">
  </div>
  <div>
- <label class="block text-sm font-semibold text-slate-700 mb-2">Dietary Type
-<span class="text-red-500">*</span></label>
- <select id="food-type" required class="w-full px-4 py-3 rounded-xl border
-border-slate-200 focus:outline-none focus:ring-2 focus:ring-brand-500 text-sm bg-white
-transition cursor-pointer">
+ <label class="block text-sm font-semibold text-slate-700 mb-2">Dietary Type <span class="text-red-500">*</span></label>
+ <select id="food-type" required class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-brand-500 text-sm bg-white transition cursor-pointer">
  <option value="Veg">Pure Vegetarian</option>
  <option value="Non-Veg">Non-Vegetarian</option>
  <option value="Both">Both Veg & Non-Veg Available</option>
@@ -274,77 +226,47 @@ transition cursor-pointer">
  </div>
  <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
  <div>
- <label class="block text-sm font-semibold text-slate-700 mb-2">Estimated
-Servings / Plates Left <span class="text-red-500">*</span></label>
- <input type="number" id="plates-count" min="5" required placeholder="e.g.,
-75" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none
-focus:ring-2 focus:ring-brand-500 text-sm transition">
+ <label class="block text-sm font-semibold text-slate-700 mb-2">Estimated Servings / Plates Left <span class="text-red-500">*</span></label>
+ <input type="number" id="plates-count" min="5" required placeholder="e.g., 75" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-brand-500 text-sm transition">
  </div>
  <div>
- <label class="block text-sm font-semibold text-slate-700 mb-2">Time
-Window for Pickup <span class="text-red-500">*</span></label>
- <input type="text" id="pickup-time" required placeholder="e.g., Today, 10:30
-PM - 12:00 AM" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outlinenone focus:ring-2 focus:ring-brand-500 text-sm transition">
+ <label class="block text-sm font-semibold text-slate-700 mb-2">Time Window for Pickup <span class="text-red-500">*</span></label>
+ <input type="text" id="pickup-time" required placeholder="e.g., Today, 10:30 PM - 12:00 AM" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-brand-500 text-sm transition">
  </div>
  </div>
  <div>
- <label class="block text-sm font-semibold text-slate-700 mb-2">Event Location
-/ Address <span class="text-red-500">*</span></label>
- <input type="text" id="location" required placeholder="e.g., Royal Palm Lawn,
-MG Road, Sector 21" class="w-full px-4 py-3 rounded-xl border border-slate-200
-focus:outline-none focus:ring-2 focus:ring-brand-500 text-sm transition">
+ <label class="block text-sm font-semibold text-slate-700 mb-2">Event Location / Address <span class="text-red-500">*</span></label>
+ <input type="text" id="location" required placeholder="e.g., Royal Palm Lawn, MG Road, Sector 21" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-brand-500 text-sm transition">
  </div>
  <div>
- <label class="block text-sm font-semibold text-slate-700 mb-2">Food Items
-Description <span class="text-red-500">*</span></label>
- <textarea id="food-items" rows="3" required placeholder="e.g., Dal Makhani,
-Paneer Tikka, Veg Biryani, Fresh Roti & Gulab Jamun (Packed in hygienic containers)"
-class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2
-focus:ring-brand-500 text-sm transition"></textarea>
+ <label class="block text-sm font-semibold text-slate-700 mb-2">Food Items Description <span class="text-red-500">*</span></label>
+ <textarea id="food-items" rows="3" required placeholder="e.g., Dal Makhani, Paneer Tikka, Veg Biryani, Fresh Roti & Gulab Jamun (Packed in hygienic containers)" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-brand-500 text-sm transition"></textarea>
  </div>
  <div>
- <label class="block text-sm font-semibold text-slate-700 mb-2">Food Photo
-(Select Unsplash Preset or Custom URL)</label>
+ <label class="block text-sm font-semibold text-slate-700 mb-2">Food Photo (Select Unsplash Preset or Custom URL)</label>
  <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-3">
- <div onclick="selectPresetImage(this, 'https://images.unsplash.com/photo1555244162-803834f70033?auto=format&fit=crop&w=600&q=80')" class="preset-imgcard cursor-pointer border-2 border-brand-500 rounded-xl overflow-hidden shadow-sm
-relative transform hover:scale-105 transition duration-200">
- <img src="https://images.unsplash.com/photo-1555244162-
-803834f70033?auto=format&fit=crop&w=300&q=80" alt="Catering" class="w-full h-24
-object-cover">
- <div class="absolute inset-0 bg-brand-500/20 flex items-center justifycenter text-white font-bold opacity-0 hover:opacity-100 transition"><i class="fa-solid facheck"></i></div>
+ <div onclick="selectPresetImage(this, 'https://images.unsplash.com/photo-1555244162-803834f70033?auto=format&fit=crop&w=600&q=80')" class="preset-img-card cursor-pointer border-2 border-brand-500 rounded-xl overflow-hidden shadow-sm relative transform hover:scale-105 transition duration-200">
+ <img src="https://images.unsplash.com/photo-1555244162-803834f70033?auto=format&fit=crop&w=300&q=80" alt="Catering" class="w-full h-24 object-cover">
+ <div class="absolute inset-0 bg-brand-500/20 flex items-center justify-center text-white font-bold opacity-0 hover:opacity-100 transition"><i class="fa-solid fa-check"></i></div>
  </div>
- <div onclick="selectPresetImage(this, 'https://images.unsplash.com/photo1546069901-ba9599a7e63c?auto=format&fit=crop&w=600&q=80')" class="preset-imgcard cursor-pointer border-2 border-transparent rounded-xl overflow-hidden shadow-sm
-relative transform hover:scale-105 transition duration-200">
- <img src="https://images.unsplash.com/photo-1546069901-
-ba9599a7e63c?auto=format&fit=crop&w=300&q=80" alt="Buffet" class="w-full h-24
-object-cover">
- <div class="absolute inset-0 bg-brand-500/20 flex items-center justifycenter text-white font-bold opacity-0 hover:opacity-100 transition"><i class="fa-solid facheck"></i></div>
+ <div onclick="selectPresetImage(this, 'https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=600&q=80')" class="preset-img-card cursor-pointer border-2 border-transparent rounded-xl overflow-hidden shadow-sm relative transform hover:scale-105 transition duration-200">
+ <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=300&q=80" alt="Buffet" class="w-full h-24 object-cover">
+ <div class="absolute inset-0 bg-brand-500/20 flex items-center justify-center text-white font-bold opacity-0 hover:opacity-100 transition"><i class="fa-solid fa-check"></i></div>
  </div>
- <div onclick="selectPresetImage(this, 'https://images.unsplash.com/photo1565299624946-b28f40a0ae38?auto=format&fit=crop&w=600&q=80')" class="preset-imgcard cursor-pointer border-2 border-transparent rounded-xl overflow-hidden shadow-sm
-relative transform hover:scale-105 transition duration-200">
- <img src="https://images.unsplash.com/photo-1565299624946-
-b28f40a0ae38?auto=format&fit=crop&w=300&q=80" alt="Feast" class="w-full h-24 objectcover">
- <div class="absolute inset-0 bg-brand-500/20 flex items-center justifycenter text-white font-bold opacity-0 hover:opacity-100 transition"><i class="fa-solid facheck"></i></div>
+ <div onclick="selectPresetImage(this, 'https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=600&q=80')" class="preset-img-card cursor-pointer border-2 border-transparent rounded-xl overflow-hidden shadow-sm relative transform hover:scale-105 transition duration-200">
+ <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=300&q=80" alt="Feast" class="w-full h-24 object-cover">
+ <div class="absolute inset-0 bg-brand-500/20 flex items-center justify-center text-white font-bold opacity-0 hover:opacity-100 transition"><i class="fa-solid fa-check"></i></div>
  </div>
- <div onclick="selectPresetImage(this, 'https://images.unsplash.com/photo1504674900247-0877df9cc836?auto=format&fit=crop&w=600&q=80')" class="preset-imgcard cursor-pointer border-2 border-transparent rounded-xl overflow-hidden shadow-sm
-relative transform hover:scale-105 transition duration-200">
- <img src="https://images.unsplash.com/photo-1504674900247-
-0877df9cc836?auto=format&fit=crop&w=300&q=80" alt="Dishes" class="w-full h-24
-object-cover">
- <div class="absolute inset-0 bg-brand-500/20 flex items-center justifycenter text-white font-bold opacity-0 hover:opacity-100 transition"><i class="fa-solid facheck"></i></div>
+ <div onclick="selectPresetImage(this, 'https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=600&q=80')" class="preset-img-card cursor-pointer border-2 border-transparent rounded-xl overflow-hidden shadow-sm relative transform hover:scale-105 transition duration-200">
+ <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=300&q=80" alt="Dishes" class="w-full h-24 object-cover">
+ <div class="absolute inset-0 bg-brand-500/20 flex items-center justify-center text-white font-bold opacity-0 hover:opacity-100 transition"><i class="fa-solid fa-check"></i></div>
  </div>
  </div>
- <input type="hidden" id="selected-image-url"
-value="https://images.unsplash.com/photo-1555244162-
-803834f70033?auto=format&fit=crop&w=600&q=80">
- <input type="text" id="custom-image-url"
-oninput="updateCustomImage(this.value)" placeholder="Or paste custom Unsplash/food
-image URL here..." class="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-sm
-focus:outline-none focus:ring-2 focus:ring-brand-500 transition">
+ <input type="hidden" id="selected-image-url" value="https://images.unsplash.com/photo-1555244162-803834f70033?auto=format&fit=crop&w=600&q=80">
+ <input type="text" id="custom-image-url" oninput="updateCustomImage(this.value)" placeholder="Or paste custom Unsplash/food image URL here..." class="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-brand-500 transition">
  </div>
  <div class="pt-4">
- <button type="submit" class="w-full bg-brand-600 hover:bg-brand-700 textwhite font-semibold py-3.5 px-6 rounded-xl shadow-lg shadow-brand-600/20 transition
-transform hover:-translate-y-0.5 active:translate-y-0 flex items-center justify-center textbase">
+ <button type="submit" class="w-full bg-brand-600 hover:bg-brand-700 text-white font-semibold py-3.5 px-6 rounded-xl shadow-lg shadow-brand-600/20 transition transform hover:-translate-y-0.5 active:translate-y-0 flex items-center justify-center text-base">
  <i class="fa-solid fa-paper-plane mr-2"></i>Publish Surplus Food Listing
  </button>
  </div>
@@ -352,31 +274,22 @@ transform hover:-translate-y-0.5 active:translate-y-0 flex items-center justify-
  </div>
  </section>
  <!-- TAB 3: SHELTER / NGO REGISTRATION -->
- <section id="view-shelter" class="hidden max-w-3xl mx-auto space-y-6 animate-fadein">
- <div class="bg-white rounded-3xl p-6 md:p-10 shadow-xl border border-slate-200
-transition-all duration-300">
+ <section id="view-shelter" class="hidden max-w-3xl mx-auto space-y-6 animate-fade-in">
+ <div class="bg-white rounded-3xl p-6 md:p-10 shadow-xl border border-slate-200 transition-all duration-300">
  <div class="text-center max-w-xl mx-auto mb-8">
- <span class="px-3 py-1 rounded-full text-xs font-semibold bg-emerald-50 textemerald-600 border border-emerald-200">Receiver Portal</span>
- <h2 class="text-2xl md:text-3xl font-extrabold text-slate-900 mt-2">Orphanage &
-Shelter Registration</h2>
- <p class="text-slate-500 text-sm mt-1">Register your orphanage, old-age home,
-or shelter to get verified and directly coordinate pickups of surplus event meals.</p>
+ <span class="px-3 py-1 rounded-full text-xs font-semibold bg-emerald-50 text-emerald-600 border border-emerald-200">Receiver Portal</span>
+ <h2 class="text-2xl md:text-3xl font-extrabold text-slate-900 mt-2">Orphanage & Shelter Registration</h2>
+ <p class="text-slate-500 text-sm mt-1">Register your orphanage, old-age home, or shelter to get verified and directly coordinate pickups of surplus event meals.</p>
  </div>
- <form id="shelter-form" onsubmit="handleShelterSubmit(event)" class="space-y6">
+ <form id="shelter-form" onsubmit="handleShelterSubmit(event)" class="space-y-6">
  <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
  <div>
- <label class="block text-sm font-semibold text-slate-700 mb-2">Organization
-Name <span class="text-red-500">*</span></label>
- <input type="text" id="shelter-name" required placeholder="e.g., Hope
-Horizon Old Age Home" class="w-full px-4 py-3 rounded-xl border border-slate-200
-focus:outline-none focus:ring-2 focus:ring-brand-500 text-sm transition">
+ <label class="block text-sm font-semibold text-slate-700 mb-2">Organization Name <span class="text-red-500">*</span></label>
+ <input type="text" id="shelter-name" required placeholder="e.g., Hope Horizon Old Age Home" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-brand-500 text-sm transition">
  </div>
  <div>
- <label class="block text-sm font-semibold text-slate-700 mb-2">Organization
-Type <span class="text-red-500">*</span></label>
- <select id="shelter-type" required class="w-full px-4 py-3 rounded-xl border
-border-slate-200 focus:outline-none focus:ring-2 focus:ring-brand-500 text-sm bg-white
-transition cursor-pointer">
+ <label class="block text-sm font-semibold text-slate-700 mb-2">Organization Type <span class="text-red-500">*</span></label>
+ <select id="shelter-type" required class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-brand-500 text-sm bg-white transition cursor-pointer">
  <option value="Orphanage">Orphanage</option>
  <option value="Old Age Home">Old Age Home</option>
  <option value="Shelter Home">Shelter Home / NGO</option>
@@ -386,49 +299,33 @@ transition cursor-pointer">
  </div>
  <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
  <div>
- <label class="block text-sm font-semibold text-slate-700 mb-2">In-Charge /
-Coordinator Name <span class="text-red-500">*</span></label>
- <input type="text" id="shelter-contact-name" required placeholder="e.g.,
-Sister Mary / Ramesh Kumar" class="w-full px-4 py-3 rounded-xl border border-slate-200
-focus:outline-none focus:ring-2 focus:ring-brand-500 text-sm transition">
+ <label class="block text-sm font-semibold text-slate-700 mb-2">In-Charge / Coordinator Name <span class="text-red-500">*</span></label>
+ <input type="text" id="shelter-contact-name" required placeholder="e.g., Sister Mary / Ramesh Kumar" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-brand-500 text-sm transition">
  </div>
  <div>
- <label class="block text-sm font-semibold text-slate-700 mb-2">Phone
-Number <span class="text-red-500">*</span></label>
- <input type="tel" id="shelter-phone" required placeholder="e.g., +91 91234
-56789" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none
-focus:ring-2 focus:ring-brand-500 text-sm transition">
+ <label class="block text-sm font-semibold text-slate-700 mb-2">Phone Number <span class="text-red-500">*</span></label>
+ <input type="tel" id="shelter-phone" required placeholder="e.g., +91 91234 56789" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-brand-500 text-sm transition">
  </div>
  </div>
  <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
  <div>
- <label class="block text-sm font-semibold text-slate-700 mb-2">Number of
-Residents / People to Feed <span class="text-red-500">*</span></label>
- <input type="number" id="shelter-capacity" required placeholder="e.g., 60"
-class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2
-focus:ring-brand-500 text-sm transition">
+ <label class="block text-sm font-semibold text-slate-700 mb-2">Number of Residents / People to Feed <span class="text-red-500">*</span></label>
+ <input type="number" id="shelter-capacity" required placeholder="e.g., 60" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-brand-500 text-sm transition">
  </div>
  <div>
- <label class="block text-sm font-semibold text-slate-700 mb-2">Vehicle
-Available for Pickup?</label>
- <select id="shelter-vehicle" class="w-full px-4 py-3 rounded-xl border borderslate-200 focus:outline-none focus:ring-2 focus:ring-brand-500 text-sm bg-white transition
-cursor-pointer">
+ <label class="block text-sm font-semibold text-slate-700 mb-2">Vehicle Available for Pickup?</label>
+ <select id="shelter-vehicle" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-brand-500 text-sm bg-white transition cursor-pointer">
  <option value="Yes (Auto/Van)">Yes (Auto / Van Available)</option>
- <option value="No (Need Delivery/Volunteer Support)">No (Need Volunteer
-/ Delivery Support)</option>
+ <option value="No (Need Delivery/Volunteer Support)">No (Need Volunteer / Delivery Support)</option>
  </select>
  </div>
  </div>
  <div>
- <label class="block text-sm font-semibold text-slate-700 mb-2">Full Address &
-Landmark <span class="text-red-500">*</span></label>
- <input type="text" id="shelter-address" required placeholder="e.g., Near City
-Hospital, Civil Lines, Zone 3" class="w-full px-4 py-3 rounded-xl border border-slate-200
-focus:outline-none focus:ring-2 focus:ring-brand-500 text-sm transition">
+ <label class="block text-sm font-semibold text-slate-700 mb-2">Full Address & Landmark <span class="text-red-500">*</span></label>
+ <input type="text" id="shelter-address" required placeholder="e.g., Near City Hospital, Civil Lines, Zone 3" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-brand-500 text-sm transition">
  </div>
  <div class="pt-4">
- <button type="submit" class="w-full bg-brand-600 hover:bg-brand-700 textwhite font-semibold py-3.5 px-6 rounded-xl shadow-lg shadow-brand-600/20 transition
-transform hover:-translate-y-0.5 active:translate-y-0 flex items-center justify-center textbase">
+ <button type="submit" class="w-full bg-brand-600 hover:bg-brand-700 text-white font-semibold py-3.5 px-6 rounded-xl shadow-lg shadow-brand-600/20 transition transform hover:-translate-y-0.5 active:translate-y-0 flex items-center justify-center text-base">
  <i class="fa-solid fa-check-circle mr-2"></i>Register & Join Receiver Network
  </button>
  </div>
@@ -438,16 +335,14 @@ transform hover:-translate-y-0.5 active:translate-y-0 flex items-center justify-
  <!-- TAB 4: LIVE IMPACT & STATS -->
  <section id="view-impact" class="hidden space-y-8 animate-fade-in">
  <div class="text-center max-w-2xl mx-auto space-y-3">
- <span class="px-3 py-1 rounded-full text-xs font-semibold bg-emerald-50 textemerald-600 border border-emerald-200">Community Impact Dashboard</span>
+ <span class="px-3 py-1 rounded-full text-xs font-semibold bg-emerald-50 text-emerald-600 border border-emerald-200">Community Impact Dashboard</span>
  <h2 class="text-3xl font-extrabold text-slate-900">Making Every Plate Count</h2>
- <p class="text-slate-500 text-sm">Real-time statistics of surplus food redistributed
-from events to local orphanages and shelters.</p>
+ <p class="text-slate-500 text-sm">Real-time statistics of surplus food redistributed from events to local orphanages and shelters.</p>
  </div>
  <!-- Stats Grid -->
  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
- <div class="bg-white p-6 rounded-3xl border border-slate-200 shadow-sm flex
-items-center space-x-4 card-hover">
- <div class="w-14 h-14 bg-emerald-100 text-emerald-600 rounded-2xl flex itemscenter justify-center text-2xl font-bold">
+ <div class="bg-white p-6 rounded-3xl border border-slate-200 shadow-sm flex items-center space-x-4 card-hover">
+ <div class="w-14 h-14 bg-emerald-100 text-emerald-600 rounded-2xl flex items-center justify-center text-2xl font-bold">
  <i class="fa-solid fa-utensils"></i>
  </div>
  <div>
@@ -455,9 +350,8 @@ items-center space-x-4 card-hover">
  <div class="text-xs font-medium text-slate-500">Meals Redistributed</div>
  </div>
  </div>
- <div class="bg-white p-6 rounded-3xl border border-slate-200 shadow-sm flex
-items-center space-x-4 card-hover">
- <div class="w-14 h-14 bg-amber-100 text-amber-600 rounded-2xl flex itemscenter justify-center text-2xl font-bold">
+ <div class="bg-white p-6 rounded-3xl border border-slate-200 shadow-sm flex items-center space-x-4 card-hover">
+ <div class="w-14 h-14 bg-amber-100 text-amber-600 rounded-2xl flex items-center justify-center text-2xl font-bold">
  <i class="fa-solid fa-calendar-check"></i>
  </div>
  <div>
@@ -465,10 +359,8 @@ items-center space-x-4 card-hover">
  <div class="text-xs font-medium text-slate-500">Events Participated</div>
  </div>
  </div>
- <div class="bg-white p-6 rounded-3xl border border-slate-200 shadow-sm flex
-items-center space-x-4 card-hover">
- <div class="w-14 h-14 bg-teal-100 text-teal-600 rounded-2xl flex items-center
-justify-center text-2xl font-bold">
+ <div class="bg-white p-6 rounded-3xl border border-slate-200 shadow-sm flex items-center space-x-4 card-hover">
+ <div class="w-14 h-14 bg-teal-100 text-teal-600 rounded-2xl flex items-center justify-center text-2xl font-bold">
  <i class="fa-solid fa-house-chimney-user"></i>
  </div>
  <div>
@@ -476,10 +368,8 @@ justify-center text-2xl font-bold">
  <div class="text-xs font-medium text-slate-500">Partner Shelters & NGOs</div>
  </div>
  </div>
- <div class="bg-white p-6 rounded-3xl border border-slate-200 shadow-sm flex
-items-center space-x-4 card-hover">
- <div class="w-14 h-14 bg-blue-100 text-blue-600 rounded-2xl flex items-center
-justify-center text-2xl font-bold">
+ <div class="bg-white p-6 rounded-3xl border border-slate-200 shadow-sm flex items-center space-x-4 card-hover">
+ <div class="w-14 h-14 bg-blue-100 text-blue-600 rounded-2xl flex items-center justify-center text-2xl font-bold">
  <i class="fa-solid fa-weight-scale"></i>
  </div>
  <div>
@@ -490,28 +380,23 @@ justify-center text-2xl font-bold">
  </div>
  <!-- Verified Shelters Directory -->
  <div class="bg-white rounded-3xl p-6 md:p-8 shadow-sm border border-slate-200">
- <h3 class="text-xl font-bold text-slate-900 mb-6 flex items-center justifybetween">
+ <h3 class="text-xl font-bold text-slate-900 mb-6 flex items-center justify-between">
  <span>Registered Partner Shelters & Orphanages</span>
- <span class="text-xs font-semibold px-3 py-1 bg-brand-50 text-brand-700
-rounded-full">Ready for Pickup</span>
+ <span class="text-xs font-semibold px-3 py-1 bg-brand-50 text-brand-700 rounded-full">Ready for Pickup</span>
  </h3>
- <div id="shelters-directory" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3
-gap-4">
+ <div id="shelters-directory" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
  <!-- Dynamic shelters list -->
  </div>
  </div>
  </section>
  </main>
- <div id="claim-modal" class="fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-sm
-hidden items-center justify-center p-4 transition-all duration-300">
- <div class="bg-white rounded-3xl max-w-md w-full p-6 md:p-8 shadow-2xl animatefade-in relative">
- <button onclick="closeClaimModal()" class="absolute top-5 right-5 text-slate-400
-hover:text-slate-600 p-2 transition">
+ <div id="claim-modal" class="fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-sm hidden items-center justify-center p-4 transition-all duration-300">
+ <div class="bg-white rounded-3xl max-w-md w-full p-6 md:p-8 shadow-2xl animate-fade-in relative">
+ <button onclick="closeClaimModal()" class="absolute top-5 right-5 text-slate-400 hover:text-slate-600 p-2 transition">
  <i class="fa-solid fa-xmark text-lg"></i>
  </button>
  <div class="text-center mb-6">
- <div class="w-14 h-14 bg-brand-100 text-brand-600 rounded-2xl flex items-center
-justify-center mx-auto mb-3 text-2xl">
+ <div class="w-14 h-14 bg-brand-100 text-brand-600 rounded-2xl flex items-center justify-center mx-auto mb-3 text-2xl">
  <i class="fa-solid fa-hand-holding-heart"></i>
  </div>
  <h3 class="text-xl font-bold text-slate-900">Claim Surplus Food</h3>
@@ -520,36 +405,23 @@ justify-center mx-auto mb-3 text-2xl">
  <form id="claim-form" onsubmit="submitClaim(event)" class="space-y-4">
  <input type="hidden" id="claim-listing-id">
  <div>
- <label class="block text-xs font-semibold text-slate-700 mb-1">Orphanage /
-Shelter / NGO Name <span class="text-red-500">*</span></label>
- <input type="text" id="claim-org" required placeholder="e.g., Sunshine Children
-Home" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-sm
-focus:outline-none focus:ring-2 focus:ring-brand-500 transition">
+ <label class="block text-xs font-semibold text-slate-700 mb-1">Orphanage / Shelter / NGO Name <span class="text-red-500">*</span></label>
+ <input type="text" id="claim-org" required placeholder="e.g., Sunshine Children Home" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-brand-500 transition">
  </div>
  <div>
- <label class="block text-xs font-semibold text-slate-700 mb-1">Coordinator
-Name <span class="text-red-500">*</span></label>
- <input type="text" id="claim-name" required placeholder="e.g., Anjali Mehta"
-class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none
-focus:ring-2 focus:ring-brand-500 transition">
+ <label class="block text-xs font-semibold text-slate-700 mb-1">Coordinator Name <span class="text-red-500">*</span></label>
+ <input type="text" id="claim-name" required placeholder="e.g., Anjali Mehta" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-brand-500 transition">
  </div>
  <div>
- <label class="block text-xs font-semibold text-slate-700 mb-1">Phone Number
-<span class="text-red-500">*</span></label>
- <input type="tel" id="claim-phone" required placeholder="e.g., +91 98111 22334"
-class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none
-focus:ring-2 focus:ring-brand-500 transition">
+ <label class="block text-xs font-semibold text-slate-700 mb-1">Phone Number <span class="text-red-500">*</span></label>
+ <input type="tel" id="claim-phone" required placeholder="e.g., +91 98111 22334" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-brand-500 transition">
  </div>
  <div>
- <label class="block text-xs font-semibold text-slate-700 mb-1">Estimated Pickup
-Time <span class="text-red-500">*</span></label>
- <input type="text" id="claim-time" required placeholder="e.g., Today at 11:00 PM"
-class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none
-focus:ring-2 focus:ring-brand-500 transition">
+ <label class="block text-xs font-semibold text-slate-700 mb-1">Estimated Pickup Time <span class="text-red-500">*</span></label>
+ <input type="text" id="claim-time" required placeholder="e.g., Today at 11:00 PM" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-brand-500 transition">
  </div>
  <div class="pt-2">
- <button type="submit" class="w-full bg-brand-600 hover:bg-brand-700 text-white
-font-semibold py-3 rounded-xl shadow-md text-sm transition transform hover:-translate-y0.5">
+ <button type="submit" class="w-full bg-brand-600 hover:bg-brand-700 text-white font-semibold py-3 rounded-xl shadow-md text-sm transition transform hover:-translate-y-0.5">
  Confirm & Request Pickup
  </button>
  </div>
@@ -557,32 +429,26 @@ font-semibold py-3 rounded-xl shadow-md text-sm transition transform hover:-tran
  </div>
  </div>
  <!-- Toast Notification Box -->
- <div id="toast" class="fixed bottom-6 right-6 z-50 transform translate-y-20 opacity-0
-transition-all duration-300 pointer-events-none">
- <div class="bg-slate-900 text-white px-6 py-3.5 rounded-2xl shadow-xl flex itemscenter space-x-3 text-sm">
+ <div id="toast" class="fixed bottom-6 right-6 z-50 transform translate-y-20 opacity-0 transition-all duration-300 pointer-events-none">
+ <div class="bg-slate-900 text-white px-6 py-3.5 rounded-2xl shadow-xl flex items-center space-x-3 text-sm">
  <i id="toast-icon" class="fa-solid fa-circle-check text-brand-400 text-lg"></i>
  <span id="toast-message">Action completed successfully!</span>
  </div>
  </div>
  <footer class="bg-white border-t border-slate-200 mt-auto py-8">
- <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row itemscenter justify-between text-slate-500 text-sm space-y-4 md:space-y-0">
+ <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between text-slate-500 text-sm space-y-4 md:space-y-0">
  <div class="flex items-center space-x-2">
- <div class="w-8 h-8 bg-brand-500 rounded-xl flex items-center justify-center textwhite shadow">
+ <div class="w-8 h-8 bg-brand-500 rounded-xl flex items-center justify-center text-white shadow">
  <i class="fa-solid fa-utensils text-sm"></i>
  </div>
  <span class="font-bold text-slate-900 text-base">SharePlate</span>
  </div>
- <p class="text-center text-xs">Zero Hunger & Zero Food Waste Initiative. Connecting
-weddings, parties & banquets directly with orphanages and old-age homes.</p>
+ <p class="text-center text-xs">Zero Hunger & Zero Food Waste Initiative. Connecting weddings, parties & banquets directly with orphanages and old-age homes.</p>
  <div class="flex items-center space-x-4 text-xs font-semibold">
- <button onclick="switchTab('explore')" class="hover:text-brand-600
-transition">Explore</button>
- <button onclick="switchTab('donate')" class="hover:text-brand-600
-transition">Donate</button>
- <button onclick="switchTab('shelter')" class="hover:text-brand-600
-transition">Shelters</button>
- <button onclick="switchTab('impact')" class="hover:text-brand-600
-transition">Impact</button>
+ <button onclick="switchTab('explore')" class="hover:text-brand-600 transition">Explore</button>
+ <button onclick="switchTab('donate')" class="hover:text-brand-600 transition">Donate</button>
+ <button onclick="switchTab('shelter')" class="hover:text-brand-600 transition">Shelters</button>
+ <button onclick="switchTab('impact')" class="hover:text-brand-600 transition">Impact</button>
  </div>
  </div>
  </footer>
@@ -597,10 +463,8 @@ transition">Impact</button>
  plates: 120,
  pickupTime: "Today, 10:30 PM - 12:00 AM",
  location: "Grand Imperial Lawn, MG Road, City Center",
- foodItems: "Shahi Paneer, Dal Makhani, Veg Biryani, Butter Naan, and Mixed
-Sweets (Hygienically packed)",
- imageUrl: "https://images.unsplash.com/photo-1555244162-
-803834f70033?auto=format&fit=crop&w=600&q=80",
+ foodItems: "Shahi Paneer, Dal Makhani, Veg Biryani, Butter Naan, and Mixed Sweets (Hygienically packed)",
+ imageUrl: "https://images.unsplash.com/photo-1555244162-803834f70033?auto=format&fit=crop&w=600&q=80",
  status: "Available",
  timestamp: "25 mins ago"
  },
@@ -614,8 +478,7 @@ Sweets (Hygienically packed)",
  pickupTime: "Today, 11:00 PM - 1:00 AM",
  location: "Hotel Emerald Heights, Sector 18",
  foodItems: "Veg Fried Rice, Manchurian, Dal Tadka, Jeera Rice, Phulkka & Rasgulla",
- imageUrl: "https://images.unsplash.com/photo-1546069901-
-ba9599a7e63c?auto=format&fit=crop&w=600&q=80",
+ imageUrl: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=600&q=80",
  status: "Available",
  timestamp: "1 hour ago"
  },
@@ -629,8 +492,7 @@ ba9599a7e63c?auto=format&fit=crop&w=600&q=80",
  pickupTime: "Today, 9:30 PM - 11:00 PM",
  location: "Community Hall, Block C, Green Park",
  foodItems: "Chicken Biryani, Chicken Curry, Paneer Butter Masala, Rumali Roti",
- imageUrl: "https://images.unsplash.com/photo-1565299624946-
-b28f40a0ae38?auto=format&fit=crop&w=600&q=80",
+ imageUrl: "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=600&q=80",
  status: "Available",
  timestamp: "2 hours ago"
  }
@@ -672,14 +534,12 @@ b28f40a0ae38?auto=format&fit=crop&w=600&q=80",
  if (t === tabId) {
  el.classList.remove('hidden');
  if (nav) {
- nav.className = "px-4 py-2 rounded-xl text-sm font-semibold text-brand-600
-bg-brand-50 transition transform hover:scale-105";
+ nav.className = "px-4 py-2 rounded-xl text-sm font-semibold text-brand-600 bg-brand-50 transition transform hover:scale-105";
  }
  } else {
  el.classList.add('hidden');
  if (nav) {
- nav.className = "px-4 py-2 rounded-xl text-sm font-semibold text-slate-600
-hover:text-slate-900 hover:bg-slate-100 transition transform hover:scale-105";
+ nav.className = "px-4 py-2 rounded-xl text-sm font-semibold text-slate-600 hover:text-slate-900 hover:bg-slate-100 transition transform hover:scale-105";
  }
  }
  });
@@ -718,35 +578,27 @@ hover:text-slate-900 hover:bg-slate-100 transition transform hover:scale-105";
  countEl.innerText = `${filteredData.length} Listings Active`;
  if (filteredData.length === 0) {
  container.innerHTML = `
- <div class="col-span-full py-16 text-center bg-white rounded-3xl border borderslate-200 animate-fade-in">
- <div class="w-16 h-16 bg-slate-100 text-slate-400 rounded-2xl flex items-center
-justify-center mx-auto mb-4 text-2xl">
+ <div class="col-span-full py-16 text-center bg-white rounded-3xl border border-slate-200 animate-fade-in">
+ <div class="w-16 h-16 bg-slate-100 text-slate-400 rounded-2xl flex items-center justify-center mx-auto mb-4 text-2xl">
  <i class="fa-solid fa-bowl-food"></i>
  </div>
- <h3 class="text-lg font-bold text-slate-800">No surplus food listings
-found</h3>
- <p class="text-slate-500 text-sm mt-1">Try adjusting your search filters or post
-a new donation.</p>
+ <h3 class="text-lg font-bold text-slate-800">No surplus food listings found</h3>
+ <p class="text-slate-500 text-sm mt-1">Try adjusting your search filters or post a new donation.</p>
  </div>
  `;
  return;
  }
  container.innerHTML = filteredData.map(item => `
- <div class="bg-white rounded-3xl overflow-hidden shadow-sm card-hover border
-border-slate-200 flex flex-col group animate-fade-in">
+ <div class="bg-white rounded-3xl overflow-hidden shadow-sm card-hover border border-slate-200 flex flex-col group animate-fade-in">
  <div class="relative h-48 overflow-hidden bg-slate-100">
- <img src="${item.imageUrl}" alt="Food"
-onerror="this.src='https://placehold.co/600x400/10b981/ffffff?text=Surplus+Food'"
-class="w-full h-full object-cover group-hover:scale-110 transition duration-700 ease-out">
+ <img src="${item.imageUrl}" alt="Food" onerror="this.src='https://placehold.co/600x400/10b981/ffffff?text=Surplus+Food'" class="w-full h-full object-cover group-hover:scale-110 transition duration-700 ease-out">
  <div class="absolute top-3 left-3 flex gap-2">
- <span class="px-3 py-1 rounded-full text-xs font-bold bg-white/90 backdropblur-md text-slate-900 shadow-sm">
- ${item.foodType === 'Veg' ? ' Pure Veg' : item.foodType === 'Non-Veg' ?
-' Non-Veg' : ' Veg & Non-Veg'}
+ <span class="px-3 py-1 rounded-full text-xs font-bold bg-white/90 backdrop-blur-md text-slate-900 shadow-sm">
+ ${item.foodType === 'Veg' ? ' Pure Veg' : item.foodType === 'Non-Veg' ? ' Non-Veg' : ' Veg & Non-Veg'}
  </span>
  </div>
  <div class="absolute top-3 right-3">
- <span class="px-3 py-1 rounded-full text-xs font-bold bg-brand-600 text-white
-shadow-md animate-pulse">
+ <span class="px-3 py-1 rounded-full text-xs font-bold bg-brand-600 text-white shadow-md animate-pulse">
  ${item.plates} Plates Left
  </span>
  </div>
@@ -756,27 +608,20 @@ shadow-md animate-pulse">
  <div class="space-y-2">
  <div class="flex items-center justify-between text-xs text-slate-400">
  <span><i class="fa-regular fa-clock mr-1"></i>${item.timestamp}</span>
- <span class="font-medium text-emerald-600 bg-emerald-50 px-2 py-0.5
-rounded">${item.status}</span>
+ <span class="font-medium text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded">${item.status}</span>
  </div>
- <h3 class="text-lg font-bold text-slate-900 group-hover:text-brand-600
-transition">${item.hostName}</h3>
- <p class="text-slate-600 text-xs line-clamp-2 leading-relaxed bg-slate-50 p2.5 rounded-xl border border-slate-100">
+ <h3 class="text-lg font-bold text-slate-900 group-hover:text-brand-600 transition">${item.hostName}</h3>
+ <p class="text-slate-600 text-xs line-clamp-2 leading-relaxed bg-slate-50 p-2.5 rounded-xl border border-slate-100">
  <i class="fa-solid fa-utensils text-brand-500 mr-1.5"></i>${item.foodItems}
  </p>
  <div class="space-y-1.5 text-xs text-slate-500 pt-1">
- <p class="flex items-center"><i class="fa-solid fa-location-dot w-4 textbrand-500 mr-2"></i><span class="truncate">${item.location}</span></p>
- <p class="flex items-center"><i class="fa-regular fa-hourglass-half w-4
-text-brand-500 mr-2"></i><span>Pickup: ${item.pickupTime}</span></p>
- <p class="flex items-center"><i class="fa-solid fa-user-shield w-4 textbrand-500 mr-2"></i><span>Host Contact: ${item.contactName}
-(${item.phone})</span></p>
+ <p class="flex items-center"><i class="fa-solid fa-location-dot w-4 text-brand-500 mr-2"></i><span class="truncate">${item.location}</span></p>
+ <p class="flex items-center"><i class="fa-regular fa-hourglass-half w-4 text-brand-500 mr-2"></i><span>Pickup: ${item.pickupTime}</span></p>
+ <p class="flex items-center"><i class="fa-solid fa-user-shield w-4 text-brand-500 mr-2"></i><span>Host Contact: ${item.contactName} (${item.phone})</span></p>
  </div>
  </div>
  <div class="pt-2 border-t border-slate-100">
- <button onclick="openClaimModal(${item.id}, '${item.hostName.replace(/'/g,
-"\\'")}')" class="w-full bg-slate-900 hover:bg-brand-600 text-white font-semibold py-2.5 px-4
-rounded-xl text-xs shadow-md transition transform active:scale-95 flex items-center
-justify-center">
+ <button onclick="openClaimModal(${item.id}, '${item.hostName.replace(/'/g, "\\'")}')" class="w-full bg-slate-900 hover:bg-brand-600 text-white font-semibold py-2.5 px-4 rounded-xl text-xs shadow-md transition transform active:scale-95 flex items-center justify-center">
  <i class="fa-solid fa-hand-holding-heart mr-2"></i>Claim Food for Shelter
  </button>
  </div>
@@ -791,8 +636,7 @@ justify-center">
  const matchesQuery = item.hostName.toLowerCase().includes(query) ||
  item.location.toLowerCase().includes(query) ||
  item.foodItems.toLowerCase().includes(query);
- const matchesType = typeFilter === 'all' || item.foodType === typeFilter || (typeFilter
-=== 'Both' && item.foodType === 'Both');
+ const matchesType = typeFilter === 'all' || item.foodType === typeFilter || (typeFilter === 'Both' && item.foodType === 'Both');
  return matchesQuery && matchesType;
  });
  renderListings(filtered);
@@ -868,24 +712,18 @@ justify-center">
  function renderSheltersDirectory() {
  const container = document.getElementById('shelters-directory');
  container.innerHTML = shelters.map(s => `
- <div class="bg-slate-50 p-5 rounded-2xl border border-slate-200 space-y-3 cardhover animate-fade-in">
+ <div class="bg-slate-50 p-5 rounded-2xl border border-slate-200 space-y-3 card-hover animate-fade-in">
  <div class="flex items-center justify-between">
- <span class="px-2.5 py-1 rounded-full text-xs font-semibold bg-emerald-100
-text-emerald-800">${s.type}</span>
- <span class="text-xs font-medium text-slate-500"><i class="fa-solid fa-users
-text-brand-500 mr-1"></i>Capacity: ${s.capacity}</span>
+ <span class="px-2.5 py-1 rounded-full text-xs font-semibold bg-emerald-100 text-emerald-800">${s.type}</span>
+ <span class="text-xs font-medium text-slate-500"><i class="fa-solid fa-users text-brand-500 mr-1"></i>Capacity: ${s.capacity}</span>
  </div>
  <div>
  <h4 class="font-bold text-slate-900 text-base">${s.name}</h4>
- <p class="text-xs text-slate-500 mt-0.5"><i class="fa-solid fa-location-dot mr-1
-text-slate-400"></i>${s.address}</p>
+ <p class="text-xs text-slate-500 mt-0.5"><i class="fa-solid fa-location-dot mr-1 text-slate-400"></i>${s.address}</p>
  </div>
- <div class="pt-2 border-t border-slate-200 text-xs text-slate-600 flex items-center
-justify-between">
- <span><i class="fa-solid fa-phone mr-1 text-brand-600"></i>${s.contactName}
-(${s.phone})</span>
- <span class="text-emerald-700 font-semibold">${s.vehicle.includes('Yes') ?
-' Has Vehicle' : ' Needs Support'}</span>
+ <div class="pt-2 border-t border-slate-200 text-xs text-slate-600 flex items-center justify-between">
+ <span><i class="fa-solid fa-phone mr-1 text-brand-600"></i>${s.contactName} (${s.phone})</span>
+ <span class="text-emerald-700 font-semibold">${s.vehicle.includes('Yes') ? ' Has Vehicle' : ' Needs Support'}</span>
  </div>
  </div>
  `).join('');
